@@ -113,8 +113,6 @@ alias vscode='$CODE_HOME'
 
 alias zshrc='cat ~/.zshrc'
 
-export MELI_USER='catmartinez'
-
 #clean terminal
 alias clean='clear'
 
