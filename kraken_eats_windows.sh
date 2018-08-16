@@ -1,4 +1,4 @@
-#for f&%$ windows
+#for f&%$º windows
 
 #install cygwin
 
