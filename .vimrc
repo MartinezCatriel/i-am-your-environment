@@ -7,6 +7,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'nerdtree'
 Plugin 'kylef/apiblueprint.vim'
+Plugin 'moll/vim-node'
+Plugin 'fatih/vim-go'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 "plugin zone
@@ -63,6 +66,9 @@ set number
 nnoremap .h :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
            \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
            \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+
+" Only for GoLang
+au BufWritePost *.go !gofmt -w %
 
 " Nerdtree Settings
 " Configure Nerdtree to open at the same time that vim does
