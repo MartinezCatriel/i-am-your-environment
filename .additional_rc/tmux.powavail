@@ -1,9 +1,9 @@
 #!/bin/bash
-# ~/bin/tmux.batt
+# ~/.additional_rc/tmux.batt
 # Returns the battery percentage value for the tmux status line
 
 # Mac version:
-pmset -g batt | tail -1 | awk '{print $2}' | tr -d ';' | tr -d '%'
+pmset -g batt | tail -1 | awk "{ print \$3 }" | tr -d ";"
 
 # Linux version:
 #cat /sys/class/power_supply/BAT?/capacity

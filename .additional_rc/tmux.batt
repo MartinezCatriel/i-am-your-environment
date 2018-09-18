@@ -1,15 +1,15 @@
 #!/bin/bash
-# ~/bin/tmux.powavail
+# ~/.additional_rc/tmux.powavail
 # Returns "^" if power is plugged in, "v" if it isn't (or "-" if fully
 # charged under Linux):
 
 # Mac version:
-case $(pmset -g batt | tail -1 | awk "{ print \$3 }" | tr -d ";") in
+case $(pmset -g batt | tail -1 | awk "{ print \$4 }" | tr -d ";") in
     discharging)
-        echo "v"
+        echo ""
     ;;
     charging)
-        echo "^"
+        echo ""
     ;;
 esac
 
